@@ -22,7 +22,7 @@ pipeline {
                 SONAR = credentials('sonar') //use ‘sonar’ credentials
             }
             parallel {     // run Sonar Scan and Integration tests in parallel
-                stage ('Integration Test'} {
+                stage ("Integration Test") {
                     steps {
                         echo 'Run integration tests here...'
                     }

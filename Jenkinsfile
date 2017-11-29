@@ -1,9 +1,5 @@
 pipeline {
     agent { label "master" }    //Run everything on an agent with the docker daemon
-    environment {
-        IMAGE = readMavenPom().getArtifactId()    //Use Pipeline Utility Steps
-        VERSION = readMavenPom().getVersion()
-    }
     stages {
         stage('Build') {
             agent {
